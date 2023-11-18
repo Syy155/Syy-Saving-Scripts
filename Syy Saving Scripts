@@ -21,6 +21,13 @@ local Window = OrionLib:MakeWindow({Name = "Syy Saving Scripts", HidePremium = f
 })
 
 Tab:AddButton({
+	Name = "Player Hub",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAP1ayer/PlayerHubOther/main/PlayerHubIngameUgcLimiteds.lua"))()
+  	end    
+})
+
+Tab:AddButton({
     Name = "Rspy",
     Callback = function()
               loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/RS/main/SimpleSpyMobile"))()
