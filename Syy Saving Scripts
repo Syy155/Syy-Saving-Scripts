@@ -1,0 +1,71 @@
+local player = game.Players.LocalPlayer
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Syy Saving Scripts", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+   
+  local Tab = Window:MakeTab({
+    Name = "Scripts",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+    local Section = Tab:AddSection({
+    Name = "Scripts"
+})
+
+    OrionLib:MakeNotification({
+    Name = "Syy Saving Scripts",
+    Content = "Welcome To My Saving Scripts!",
+    Image = "rbxassetid://4483345998",
+    Time = 0
+})
+
+Tab:AddButton({
+    Name = "Rspy",
+    Callback = function()
+              loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/RS/main/SimpleSpyMobile"))()
+      end    
+})
+
+Tab:AddButton({
+    Name = "Fly V3",
+    Callback = function()
+              loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+      end    
+})
+
+Tab:AddButton({
+    Name = "Delete Proximity Prompt Cooldown",
+    Callback = function()
+              while true do
+    for _, v in next, workspace:GetDescendants() do
+        if v:IsA("ProximityPrompt") then
+            v.HoldDuration = 0
+        end
+    end
+    wait(1)  -- Adjust the delay between loops as needed
+      end
+      end    
+})
+
+Tab:AddButton({
+    Name = "Hide Players",
+    Callback = function()
+              _G.HideAll = true
+while _G.HideAll and  task.wait() do
+
+for i,v in pairs(game.Players:GetPlayers()) do
+if v.Name ~= game.Players.LocalPlayer.Name and v.Character then
+v.Character:Destroy()
+end
+end
+      end
+      end    
+})
+
+Tab:AddButton({
+    Name = "Infinite Yield",
+    Callback = function()
+              loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+      end    
+})
