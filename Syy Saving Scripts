@@ -49,7 +49,7 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-    Name = "Hide Players",
+    Name = "Adonis",
     Callback = function()
               _G.HideAll = true
 while _G.HideAll and  task.wait() do
@@ -68,4 +68,38 @@ Tab:AddButton({
     Callback = function()
               loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
       end    
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		-- add to autoexec, makes your screen get a red tint whenever adonis is in a game
+local function tintScreenRedWithTransparency()
+    local ScreenGui = Instance.new("ScreenGui")
+    local Frame = Instance.new("Frame")
+    
+    ScreenGui.Name = "RedTint"
+    Frame.Size = UDim2.new(1, 0, 1, 0)
+    Frame.BackgroundColor3 = Color3.new(1, 0, 0) -- Red color
+    Frame.BackgroundTransparency = 0.5 -- Set transparency here (0.0 = fully opaque, 1.0 = fully transparent)
+    Frame.BorderSizePixel = 0
+    
+    Frame.Parent = ScreenGui
+    ScreenGui.Parent = game.Players.LocalPlayer.PlayerGui
+end
+
+for _, v in pairs(game:GetDescendants()) do
+    if (string.find(v.Name, "ADONIS")) or (v:IsA("ImageButton") and v.Image.Name == "rbxassetid://357249130") then
+        print("ADONIS")
+        tintScreenRedWithTransparency()
+    end
+end
+
+for x, d in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
+    if d:IsA("RemoteEvent") and d:FindFirstChild("__FUNCTION") then
+        print("ADONIS")
+        tintScreenRedWithTransparency()
+    end
+end
+  	end    
 })
