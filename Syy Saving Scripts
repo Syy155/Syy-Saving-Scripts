@@ -49,7 +49,7 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-    Name = "Adonis",
+    Name = "Hide Players",
     Callback = function()
               _G.HideAll = true
 while _G.HideAll and  task.wait() do
@@ -71,7 +71,7 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-	Name = "Button!",
+	Name = "Adonis",
 	Callback = function()
       		-- add to autoexec, makes your screen get a red tint whenever adonis is in a game
 local function tintScreenRedWithTransparency()
